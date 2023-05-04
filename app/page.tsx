@@ -171,7 +171,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-primary text-white md:mb-[100px] mb-20">
+      <section id="bg-overlay" className="bg-primary text-white md:mb-[100px] mb-20">
         <div className="py-[60px] max-w-5xl mx-auto px-6 lg:px-0">
           <div className="text-center md:w-1/2 w-full mx-auto">
             <h2 className="font-bold md:text-4xl text-2xl mb-4">Have a project idea and want to make it come true?</h2>

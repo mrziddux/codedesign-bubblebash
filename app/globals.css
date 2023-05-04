@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#bg-overlay {
+  background-image: url('/ornament.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  background-position-x: 30%;
+}
