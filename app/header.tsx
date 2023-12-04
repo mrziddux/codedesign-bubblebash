@@ -28,7 +28,7 @@ function Header() {
         <Logo className="fill-white w-8 h-8" />
         <p className="text-lg font-semibold">STACKNATION</p>
       </Link>
-      <button className="block md:hidden z-50" onClick={navToggleHandler}>
+      <button className={`md:hidden z-50 ${toggle ? 'fixed right-4' : 'block'}`} onClick={navToggleHandler}>
         {toggle ? <XIcon /> : <BarIcon />}
       </button>
       <nav className={`fixed md:static md:translate-x-0 h-screen md:h-auto top-0 right-0 sm:left-1/4 left-0 flex flex-col justify-center md:justify-start md:flex-row items-center gap-10 text-base transition md:bg-transparent bg-black ${!toggle ? 'translate-x-full' : 'z-40 translate-x-0'}`}>
