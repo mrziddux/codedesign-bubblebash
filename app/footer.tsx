@@ -1,38 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from "./icon";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, Logo, TwitterIcon } from "./icon";
 
-const pagesItems = ['Home', 'Ourservice', 'Portfolio', 'Testimonial', 'Contact Us']
-const exploreItems = ['Resources', 'Blog', 'Documents']
-const companyItems = ['About Us', 'Partners', 'Customers', 'Contact Us']
+const pagesItems = ['Home', 'Our services', 'Portfolio', 'Contact Us']
 
 function Footer() {
   return (
     <>
       <div className="flex justify-between flex-col lg:flex-row text-black gap-y-10">
         <div className="flex-1">
-          <Link href={'/'} className="flex gap-2 items-center mb-4">
-            <Image src={'/logo.svg'} alt="Bubble Bash Logo" width={40} height={40} />
-            <p className="text-lg font-semibold">Bubble Bash</p>
+          <Link href={'/'} className="flex gap-4 items-center mb-4">
+            <Logo className="fill-black w-8 h-8" />
+            <p className="text-lg font-semibold">STACKNATION</p>
           </Link>
-          <p className="text-base w-3/4 mb-8">Introducing, We are Bubble Bash digital agency company with more than 6 years of experience. We are committed to serve with all our heart</p>
-          <div className="flex gap-6">
+          <p className="text-base w-3/4">Where Innovation Sparks, Ideas Blossom, and Digital Excellence Unfolds &ndash; Crafting Tomorrow&apos;s Solutions with Ingenuity and Passionate Expertise!</p>
+          {/* <div className="flex gap-6">
             <FacebookIcon />
             <TwitterIcon />
             <InstagramIcon />
             <LinkedInIcon />
-          </div>
+          </div> */}
         </div>
-        <div className="flex-1 flex justify-between flex-wrap gap-y-10">
-          <ul className="flex flex-col gap-4 sm:w-fit w-1/2">
-            <li>
-              <h6 className="font-base font-semibold">Pages</h6>
-            </li>
+        <div className="flex-1">
+          <h6 className="font-base font-semibold h-fit mb-4">Navigasi</h6>
+          <ul className="flex flex-col md:flex-row w-full gap-4 lg:justify-between h-fit">
             {pagesItems.map((item, i) => (
-              <li key={i} className="w-full">{item}</li>
+              <li key={i} className="h-fit">
+                <Link href={`#${item.toLowerCase().replace(' ', '-')}`}>{item}</Link>
+              </li>
             ))}
           </ul>
-          <ul className="flex flex-col gap-4 sm:w-fit w-1/2">
+          {/* <ul className="flex flex-col gap-4 sm:w-fit w-1/2">
             <li>
               <h6 className="font-base font-semibold">Explore</h6>
             </li>
@@ -47,7 +45,7 @@ function Footer() {
             {companyItems.map((item, i) => (
               <li key={i} className="w-full">{item}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </>

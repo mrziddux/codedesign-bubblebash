@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BarIcon, XIcon } from "./icon";
+import { BarIcon, Logo, XIcon } from "./icon";
 
-const navItems = ['Home', 'Our Services', 'Portfolio', 'Testimonial', 'Contact Us']
+const navItems = ['Home', 'Our Services', 'Portfolio', 'Contact Us']
 
 function Header() {
   const [toggle, setToggle] = useState<Boolean>(false)
@@ -24,16 +24,16 @@ function Header() {
 
   return (
     <header className="w-full py-4 flex justify-between items-center mt-6 text-white">
-      <Link href={'/'} className="flex gap-2 items-center">
-        <Image src={'/logo.svg'} alt="Bubble Bash Logo" width={40} height={40} />
-        <p className="text-lg font-semibold">Bubble Bash</p>
+      <Link href={'/'} className="flex gap-4 items-center">
+        <Logo className="fill-white w-8 h-8" />
+        <p className="text-lg font-semibold">STACKNATION</p>
       </Link>
       <button className="block md:hidden z-50" onClick={navToggleHandler}>
         {toggle ? <XIcon /> : <BarIcon />}
       </button>
       <nav className={`fixed md:static md:translate-x-0 h-screen md:h-auto top-0 right-0 sm:left-1/4 left-0 flex flex-col justify-center md:justify-start md:flex-row items-center gap-10 text-base transition md:bg-transparent bg-black ${!toggle ? 'translate-x-full' : 'z-40 translate-x-0'}`}>
         {navItems.map((item, i) => (
-          <Link key={i} href={'#'} className="hover:underline underline-offset-2">{item}</Link>
+          <Link key={i} href={`#${item.toLowerCase().replace(' ', '-')}`} className="hover:underline underline-offset-2" scroll={false}>{item}</Link>
         ))}
       </nav>
     </header>

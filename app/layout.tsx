@@ -16,16 +16,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html className='scroll-smooth' style={{ scrollBehavior: 'smooth' }} lang="en">
       <body className={`${openSans.className}`}>
-        <div id='bg-overlay' className='-z-10 bg-primary md:h-[929px] h-[720px] absolute inset-x-0 top-0 w-screen'></div>
-        <div className="max-w-5xl mx-auto px-6 lg:px-0">
-          <Header />
-        </div>
-          {children}
-        <div className="max-w-5xl mx-auto px-6 lg:px-0 py-16">
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   )

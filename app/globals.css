@@ -9,3 +9,7 @@
   background-size: cover;
   background-position-x: 30%;
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
