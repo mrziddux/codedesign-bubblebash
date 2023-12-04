@@ -137,14 +137,14 @@ export default function Home() {
             <h4 className="text-xl font-semibold mb-2">ZephyrPerks</h4>
             <p className="font-base">Membuat aplikasi untuk claim dan scan voucher pada setiap catalog. juga memberikan informasi catalog terbaru</p>
           </Link>
-          <div></div>
+          {/* <div></div>
           <div>
             <div className="w-full aspect-video relative mb-4">
               <Image src={'/images/project-4.jpg'} alt="Project Image 3" className="object-cover" fill />
             </div>
             <h4 className="text-xl font-semibold mb-2">Dashboardy</h4>
             <p className="font-base">Membuat sistem aplikasi, untuk menghitung penjualanmu setiap harinya</p>
-          </div>
+          </div> */}
           
         </div>
       </section>
@@ -193,10 +193,10 @@ export default function Home() {
             <div className="text-center md:w-1/2 w-full mx-auto">
               <h2 className="font-bold md:text-4xl text-2xl mb-4 capitalize">Punya ide bisnis? Wujudkan bersama StackNation!</h2>
               <p className="text-base mb-8">Jangan ragu untuk menghubungi kami! Setiap ide Anda memiliki jawaban kreatif di StackNation. Mari wujudkan ide-ide brilian bersama!</p>
-              <button className="md:px-8 md:py-6 px-6 py-4 bg-white text-black inline-flex gap-2 font-bold text-base">
+              <Link target="_blank" href={'https://wa.me/+6282229011758'} className="md:px-8 md:py-6 px-6 py-4 bg-white text-black inline-flex gap-2 font-bold text-base">
                 <span>Contact Us</span>
                 <ArrowRightIcon />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

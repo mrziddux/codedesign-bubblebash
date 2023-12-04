@@ -13,7 +13,7 @@ function Footer() {
             <Logo className="fill-black w-8 h-8" />
             <p className="text-lg font-semibold">STACKNATION</p>
           </Link>
-          <p className="text-base w-3/4">Where Innovation Sparks, Ideas Blossom, and Digital Excellence Unfolds &ndash; Crafting Tomorrow&apos;s Solutions with Ingenuity and Passionate Expertise!</p>
+          <p className="text-base w-3/4">Terobos Batas Kreativitas dengan Tim Ahli Kami untuk Merancang dan Mengembangkan Web & Aplikasi yang Membuat Anda Tersenyum Puas!!</p>
           {/* <div className="flex gap-6">
             <FacebookIcon />
             <TwitterIcon />

@@ -1,9 +1,22 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const CityFamily = () => {
 	return (
 		<>
 			<main className='max-w-5xl mx-auto px-6 lg:px-0 mb-20'>
+				<nav className='py-4 w-full'>
+					<Link href={'/'} className='inline-flex items-center gap-2 font-medium'>
+						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' className='w-5 h-5'>
+							<path
+								fill-rule='evenodd'
+								d='M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z'
+								clip-rule='evenodd'
+							/>
+						</svg>
+						<span>Kembali</span>
+					</Link>
+				</nav>
 				<section>
 					<div className='w-full aspect-video relative overflow-hidden'>
 						<Image src={'/images/hero-project-1.jpg'} alt='Hero Image' className='object-cover' fill />
